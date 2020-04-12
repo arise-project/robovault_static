@@ -1,0 +1,25 @@
+<!-- Artificial Renaissance itself 2019-2020. All rights reserved. -->
+
+<div class="oj-hybrid-padding">
+
+  <oj-navigation-list id="menu" drill-mode="none" selection="{{router.stateId}}"
+    on-oj-before-select="[[selectHandler]]">
+    <ul>
+      <oj-bind-for-each data="[[router.states]]">
+        <template>
+          <li :id="[[$current.data.id]]">
+            <a>
+              <oj-bind-text value="[[$current.data.label]]"></oj-bind-text>
+            </a>
+          </li>
+        </template>
+      </oj-bind-for-each>
+    </ul>
+  </oj-navigation-list>
+
+  <span role="separator" aria-orientation="vertical" class="oj-toolbar-separator"></span>
+
+  <div id="content">
+    <oj-module config="[[moduleConfig]]" animation="[[moduleAnimation]]"></oj-module>
+  </div>
+</div>

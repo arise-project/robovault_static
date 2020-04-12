@@ -1,0 +1,23 @@
+[
+    {
+        "EMPLOYEE_ID": 100,
+        "FIRST_NAME": "Steven",
+        "LAST_NAME": "King",
+        "EMAIL": "SKING",
+        "PHONE_NUMBER": "515.123.4567"
+    },
+    {
+        "EMPLOYEE_ID": 101,
+        "FIRST_NAME": "Neena",
+        "LAST_NAME": "Kochhar",
+        "EMAIL": "NKOCHHAR",
+        "PHONE_NUMBER": "515.123.4568"
+    },
+    {
+        "EMPLOYEE_ID": 102,
+        "FIRST_NAME": "Lex",
+        "LAST_NAME": "De Haan",
+        "EMAIL": "LDEHAAN",
+        "PHONE_NUMBER": "515.123.4569"
+    }
+]

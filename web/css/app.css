@@ -1,0 +1,47 @@
+/*
+    Document   : override
+    Created on : 01.09.2019
+    Author     : pirogov.e@gmail.com
+    Description:
+    Artificial Renaissance itself 2019-2020. All rights reserved.
+*/
+
+.sendOffScreen {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.oj-navigationlist-listview 
+{
+  overflow-x: scroll;
+}
+
+.demo-robovalut-icon
+{
+  width:150px;
+  height:18px
+}
+
+.demo-robovalut-icon:before
+{
+  content:url("images/robovault_logo.svg")
+}
+
+html:not([dir="rtl"]) .demo-robovalut-icon
+{
+  padding-right:4px
+}
+
+html[dir="rtl"] .demo-robovalut-icon
+{
+  padding-left:4px
+}
+
+.demo-robovalut-icon:before
+{
+  display:inline
+}

@@ -1,0 +1,35 @@
+<!-- Artificial Renaissance itself 2019-2020. All rights reserved. -->
+
+<h1>
+  Календарь
+</h1>
+<h3>Январь 2020</h3>
+
+<!-- <div class="oj-flex oj-sm-flex-items-initial oj-flex-items-pad" style="width:100%; max-width:680px;">
+    <div class="oj-flex-item" style="display:inline-block;padding-right:20px;margin-bottom:15px;">
+    -->
+<div class="oj-flex-item" style="display:inline-block;padding-right:20px;margin-bottom:15px;">
+  <div style="word-spacing:6px;margin-left:6px;">ПН ВТ СР ЧТ ПТ СБ ВС</div>
+  <oj-picto-chart id='pictochart1' data="[[janDataProvider]]" layout="horizontal" row-height="20" column-count="7"
+    column-width="30">
+    <template slot='itemTemplate' data-oj-as='item'>
+      <oj-picto-chart-item short-desc='[[getTooltip("январь", item.data.date, item.data.value)]]'
+        color='[[getColor(item.data.value)]]'>
+      </oj-picto-chart-item>
+    </template>
+  </oj-picto-chart>
+</div>
+<!-- </div>          
+</div> -->
+
+
+
+<oj-legend id='legend1' class="oj-flex-item" style="display:inline-block;max-height:50px;width:100%;"
+  orientation="horizontal" data="[[legendDataProvider]]" symbol-width="15" symbol-height="15" halign="center">
+
+  <template slot="itemTemplate" data-oj-as="item">
+    <oj-legend-item text="[[item.data.text]]" color="[[item.data.color]]">
+    </oj-legend-item>
+
+  </template>
+</oj-legend>

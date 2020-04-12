@@ -1,0 +1,40 @@
+<!-- Artificial Renaissance itself 2019-2020. All rights reserved. -->
+
+<h1>
+    Вход в Robo Vault
+</h1>
+<div>
+    <oj-label for="user">Пользователь</oj-label>
+    <!-- <oj-input-text id="user" label-hint="[[labelHint1]]" label-edge="[[childLabelEdge]]"
+                    placeholder='{{placeholder()? "placeholder text": null}}' 
+                    value='{{(!showValue())? null : "text"}}'
+                    disabled="[[disableFormControls()]]" readonly="[[readonlyFormControls]]" 
+                    messages-custom="{{messages}}" required="[[required]]"
+                    help-hints.source="[[source]]"
+                    help-hints.definition="[[definition]]"
+                    help.instruction="[[instruction]]"></oj-input-text> -->
+
+    <oj-input-text id="user" value='{{login}}'></oj-input-text>
+</div>
+
+<div>
+    <oj-label for="password">Пароль</oj-label>
+    <!-- <oj-input-password id="f2" label-hint="[[labelHint2]]" label-edge="[[childLabelEdge]]"
+        placeholder='{{placeholder()? "placeholder text": null}}'  
+        value='{{(!showValue())? null : "text"}}'
+        disabled="[[disableFormControls()]]"  readonly="[[readonlyFormControls]]" 
+        messages-custom="{{messages}}" required="[[required]]"
+        help-hints.source="[[source]]"
+        help-hints.definition="[[definition]]"
+        help.instruction="[[instruction]]"></oj-input-password> -->
+
+    <oj-input-password id="password" placeholder='password' value='{{password}}'></oj-input-password>
+</div>
+
+<oj-button on-click="[[clickListener_login]]">
+    <span>Вход</span>
+</oj-button>
+
+<oj-button chroming="borderless" on-click="[[clickListener_registration]]">
+    <span>Зарегестрироваться</span>
+</oj-button>

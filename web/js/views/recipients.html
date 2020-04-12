@@ -1,0 +1,49 @@
+<!-- Artificial Renaissance itself 2019-2020. All rights reserved. -->
+
+<h1>
+    Получатели
+</h1>
+<div id="sampleDemo" style="" class="demo-padding demo-container">
+    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+
+        <oj-data-grid id="datagrid" style="width:100%;height:400px;max-width:777px;"
+            aria-label="Data Grid Formatted Row Based Grid Demo" data="[[dataSource]]" selection-mode.row="multiple"
+            banding-interval.row="1" dnd.reorder.row="enable"
+            header.column.renderer="[[KnockoutTemplateUtils.getRenderer('header_template')]]"
+            header.column.style="width:125px" header.column.resizable.width="enable"
+            header.column.resizable.height="enable"
+            cell.renderer="[[KnockoutTemplateUtils.getRenderer('cell_template')]]"
+            cell.class-name="[[getCellClassName]]"></oj-data-grid>
+
+        <script type="text/html" id="header_template">
+          <!-- ko if: $context.key=='FIRST_NAME' -->
+        <span data-bind="text: 'Имя'"></span>
+        <!-- /ko -->
+        <!-- ko if: $context.key=='LAST_NAME' -->
+        <span data-bind="text: 'Фамилия'"></span>
+        <!-- /ko -->
+        <!-- ko if: $context.key=='EMAIL' -->
+        <span data-bind="text: 'Почта'"></span>
+        <!-- /ko -->
+        <!-- ko if: $context.key=='PHONE_NUMBER' -->
+        <span data-bind="text: 'Телефон #'"></span>
+        <!-- /ko -->
+        </script>
+
+        <script type="text/html" id="cell_template">
+          <!-- ko if: ($context.keys.column=='FIRST_NAME' || $context.keys.column=='LAST_NAME' || 
+                  $context.keys.column=='PHONE_NUMBER' || $context.keys.column=='DEPARTMENT_ID') -->
+        <span data-bind="text: $data"></span>
+        <!-- /ko -->
+        <!-- ko if: $context.keys.column=='EMAIL' -->
+        <span data-bind="html: '<a href=\'mailto:' + 
+                      $context.data + '@acme.com?Subject=Hello\'>' + $context.data + '</a>'">
+        </span>
+        <!-- /ko -->
+        </script>
+    </div>
+</div>
+
+<oj-button>
+    <span>Добавить</span>
+</oj-button>

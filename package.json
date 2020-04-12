@@ -1,0 +1,23 @@
+{
+  "name": "staticHtml",
+  "version": "1.0.0",
+  "description": "curl -sL https://rpm.nodesource.com/setup_10.x | sudo -E bash -",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorzv/staticHtml.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorzv/staticHtml/issues"
+  },
+  "homepage": "https://github.com/victorzv/staticHtml#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
